@@ -21,10 +21,31 @@ const Profile = {
 
         update(req, res){
            //1) Pegar os dados do req.body
+            const data = req.body
+
            //2) Definir quantas semanas tem num ano
-           //3) Remover as semanas de férias
-           //4) Quantas horas por semana estou trabalhando
+           const weeksPerYear = 52
+
+           //3) Remover as semanas de férias, para obter quantas semanas tem em 1 mês
+           const weeksPerMonth = (weeksPerYear  - data['vacation-per-year']) / 12
+
+           //4) Total de horas trabalhadas na semana
+            const weekTotalHours = data['hours-per-day'] * data['days-per-week']
+
            //5) Total de horas trabalhadas no mês 
+           const monthlyTotalHours = weekTotalHours * weeksPerMonth
+
+           //6) Valor da hora
+           const valueHour = data['monthly-budget'] / monthlyTotalHours
+
+           //Atualizando dados do perfil
+           Profile.data = {
+               ...Profile.data,
+               ...req.body,
+               'value-hour': valueHour
+           }
+
+           return res.redirect('/profile')
         }
     }
 }
@@ -36,7 +57,7 @@ const Job = {
             name: "Pizzaria Guloso",
             "daily-hours": 2,
             "total-hours": 60,
-            created_at: Date.now()
+            created_at: Date.now()            
         },
 
         {
@@ -44,7 +65,7 @@ const Job = {
             name: "One Two Project",
             "daily-hours": 3,
             "total-hours": 47,
-            created_at: Date.now()
+            created_at: Date.now()            
         },
     ],
 
@@ -59,7 +80,7 @@ const Job = {
                     ...job,
                     remaining,
                     status,
-                    budget: Profile.data['value-hour'] * job['total-hours']
+                    budget: Job.services.calculateBudget(job, Profile.data['value-hour'])
                 }
             })
 
@@ -82,6 +103,47 @@ const Job = {
             })
 
             return res.redirect('/')
+        },
+
+        show(req, res){
+            const jobId = req.params.id //Obtendo o id do job pelo parâmetro da URL
+
+            const job = Job.data.find(job => Number(job.id) === Number(jobId))
+
+            if(!job){
+                return res.send('Job not found!')
+            }
+
+            job.budget = Job.services.calculateBudget(job, Profile.data['value-hour'])
+
+            return res.render(views + 'job-edit', {job})
+        },
+
+        update(req, res){
+            const jobId = req.params.id //Obtendo o id do job pelo parâmetro da URL
+
+            const job = Job.data.find(job => Number(job.id) === Number(jobId))
+
+            if(!job){
+                return res.send('Job not found!')
+            }
+
+            const updatedJob = {
+                ...job,
+                name: req.body.name,
+                "total-hours": req.body['total-hours'],
+                "daily-hours": req.body['daily-hours']
+            }
+
+            Job.data = Job.data.map(job => {
+                if(Number(job.id) === Number(jobId)){
+                    job = updatedJob
+                }
+
+                return job
+            })
+
+            res.redirect('/job/' + jobId)
         }
     },
 
@@ -102,7 +164,9 @@ const Job = {
 
             //Restam x dias
             return dayDiff
-        }
+        },
+
+        calculateBudget: (job, valueHour) => valueHour * job['total-hours']
     }
 }
 
@@ -125,9 +189,10 @@ const Job = {
 routes.get('/', Job.controllers.index) //Ao acessar o index.html, serão apresentados os valores de dias restantes para encerramento do projeto calculados
 routes.get('/job', Job.controllers.create) //Renderizando para jobs.html
 routes.post('/job', Job.controllers.save) //Salvando dados do job e redirecionar para o index.html
-routes.get('/job/edit', (req, res) => res.render(views + 'job-edit'))
-routes.get('/profile', (req, res) => Profile.controllers.index) //Ao renderizar profile.html, serão enviados os dados do objeto {profile} a ela
-routes.get('/profile', Profile.controllers.update) //Atualizando os dados do job
+routes.get('/job/:id', Job.controllers.show) //Mostrando os dados do job
+routes.post('/job/:id', Job.controllers.update) //Atualizando os dados do job
+routes.get('/profile', Profile.controllers.index) //Ao renderizar profile.html, serão enviados os dados do objeto {profile} a ela
+routes.post('/profile', Profile.controllers.update) //Atualizando os dados do perfil
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 module.exports = routes
