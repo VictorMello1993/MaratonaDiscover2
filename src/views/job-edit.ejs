@@ -41,7 +41,7 @@
     <%- include('parts/page-header', {title: 'Editar Job'}) %> 
 
     <div class="container flex animate-up delay-2">
-        <form id="form-job" action="/job/<%= job.id %>" method="POST">
+        <form id="form-job" action="/job/<%= job.id %>" method="post">
           <fieldset>
             <legend>Dados do Job</legend>
             <div class="separator light"></div>
@@ -94,7 +94,7 @@
             type="submit" 
             title="Salvar Dados">Salvar</button>
           <a 
-            href="/" 
+            href="#" 
             class="button gray open-modal"
             >
             <img 
@@ -104,7 +104,6 @@
           </a>
         </div>
       </aside>
-      
     </div>
     <!-- end container -->
 
@@ -122,13 +121,15 @@
           <button
             class="button red"
             type="submit"
-            form="delete-job">Excluir Job</button>
+            form="delete-job">Excluir Job
+            </button>
         </footer>
       </div>
       <form 
         method="post" 
-        action="/job/delete/{JOBID}" 
-        id="delete-job"></form>
+        action="/job/delete/<%=  job.id%>" 
+        id="delete-job">
+      </form>
     </div>
     <!-- end modal-wrapper -->
   </body>

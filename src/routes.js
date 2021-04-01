@@ -92,7 +92,7 @@ const Job = {
         },
 
         save(req, res) {
-            const lastId = Job.data[Job.data.length - 1]?.id || 1
+            const lastId = Job.data[Job.data.length - 1]?.id || 0
 
             Job.data.push({
                 id: lastId + 1,
@@ -144,6 +144,14 @@ const Job = {
             })
 
             res.redirect('/job/' + jobId)
+        },
+
+        delete(req, res){
+            const jobId = req.params.id
+
+            Job.data = Job.data.filter(job => Number(job.id) !== Number(jobId))        
+
+            return res.redirect('/')
         }
     },
 
@@ -191,7 +199,8 @@ routes.get('/job', Job.controllers.create) //Renderizando para jobs.html
 routes.post('/job', Job.controllers.save) //Salvando dados do job e redirecionar para o index.html
 routes.get('/job/:id', Job.controllers.show) //Mostrando os dados do job
 routes.post('/job/:id', Job.controllers.update) //Atualizando os dados do job
-routes.get('/profile', Profile.controllers.index) //Ao renderizar profile.html, serão enviados os dados do objeto {profile} a ela
+routes.post('/job/delete/:id', Job.controllers.delete) //Excluindo um job
+routes.get('/profile', Profile.controllers.index) //Mostrando os dados do perfil
 routes.post('/profile', Profile.controllers.update) //Atualizando os dados do perfil
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
