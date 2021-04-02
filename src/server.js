@@ -1,9 +1,13 @@
 const express = require('express')
 const server = express()
 const routes = require('./routes')
+const path = require('path')
 
 //Configuração do EJS para que seja possível utilizar o template engine (ou view engine) para programar em JS dentro do HTML
 server.set('view engine', 'ejs')
+
+//Mudar a localização da pasta 'views'
+server.set('views', path.join(__dirname, 'views'))
 
 //Antes de executar as rotas, executar a função middleware use() para habilitar os arquivos estáticos da aplicação que estão na pasta public
 server.use(express.static('public'))
