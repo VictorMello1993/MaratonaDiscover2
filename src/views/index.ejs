@@ -88,11 +88,7 @@
               <div class="deadline column">
                 <span>Prazo</span>
                 <p>
-                  <% if(job.status === 'progress'){ %>
-                  <%= job.remaining %> dias para a entrega
-                <%} else{ %>
-                  Prazo encerrado
-                <% } %> 
+                  <%= job.status === 'progress' ? `${job.remaining} dias para a entrega` : 'Prazo encerrado'%>                                   
                 </p>
               </div>
               <div class="amount column">
