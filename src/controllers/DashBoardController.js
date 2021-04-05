@@ -24,7 +24,7 @@ module.exports = {
             //Somando a quantidade de status dos projetos no dashboard => acessando pela chave correspondente ao conteúdo da variável 'status'
             statusCount[status] += 1
                         
-            jobTotalHours = status == 'progress' ? jobTotalHours + Number(job['daily-hours']) : jobtotalHours        
+            jobTotalHours = status == 'progress' ? jobTotalHours + Number(job['daily-hours']) : jobTotalHours        
 
             return {
                 ...job,

@@ -4,7 +4,7 @@
   "description": "Freelancer Calculator",
   "main": "src/server.js",
   "scripts": {
-    "dev": "nodemon ."
+    "dev": "nodemon --inspect ."
   },
   "repository": {
     "type": "git",
