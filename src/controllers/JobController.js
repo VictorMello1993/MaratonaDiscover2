@@ -22,11 +22,11 @@ module.exports = {
         return res.redirect('/')
     },
 
-    show(req, res){
+    async show(req, res){
         const jobs = Job.get()
         const jobId = req.params.id //Obtendo o id do job pelo parâmetro da URL
         const job = jobs.find(job => Number(job.id) === Number(jobId))
-        const profile = Profile.get()
+        const profile = await Profile.get()
 
         if(!job){
             return res.send('Job not found!')
