@@ -43,7 +43,7 @@
 ```
 git clone https://github.com/VictorMello1993/MaratonaDiscover2.git
 ```
-2 - Abra VS Code e abra a pasta MaratonaDiscover2 que é a pasta raíz do projeto
+2 - Abra VS Code e abra a pasta "MaratonaDiscover2" que é a pasta raíz do projeto
 
 3 - No terminal do VS Code, digite `npm i` para instalar todas as dependências ao projeto
 
