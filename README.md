@@ -49,7 +49,7 @@ git clone https://github.com/VictorMello1993/MaratonaDiscover2.git
 
 4 - Ainda no terminal, digite `npm run dev` para iniciar o servidor. Caso ocorra algum erro, provavelmente é a porta já ocupada por outra aplicação. Então, mude de porta na linha ```server.listen(3001, () => console.log('Loading...'))``` no ```server.js```, trocando 3001 para qualquer outro número, e execute novamente o comando
 
-5 - Se estiver funcionando na porta 3001, na barra de endereços do seu navegador, escreva `localhost: 3001` que a aplicação já está em execução
+5 - Se estiver funcionando na porta 3001, na barra de endereços do seu navegador, escreva `localhost:3001` que a aplicação já está em execução
 
 ---
 
