@@ -4,7 +4,7 @@ const Profile = require('../models/Profile')
 
 module.exports = {
     async index(req, res) {
-        const jobs = Job.get()
+        const jobs = await Job.get()
         const profile = await Profile.get()
 
         //Inicializando os dados dos status com 0.

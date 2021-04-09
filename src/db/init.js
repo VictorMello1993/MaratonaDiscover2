@@ -43,32 +43,14 @@ const initDb = {
                                             );`
         )
 
-        await db.run(`INSERT INTO jobs(name,
-                                       daily_hours,
-                                       total_hours,
-                                       created_at
-                             ) VALUES(
-                            "Pizzaria Guloso",
-                            2,
-                            1,
-                            1617514376018
-                        );`
+        await db.run(`INSERT INTO jobs(name, daily_hours, total_hours, created_at) 
+                                  VALUES("Pizzaria Guloso", 2, 1,1617514376018);`
         )
 
-        await db.run(`INSERT INTO jobs(name,
-                                       daily_hours,
-                                       total_hours,
-                                       created_at
-                            ) VALUES(
-                            "One Two Projects",
-                            3,
-                            47,
-                            1617514376018
-                        );
-        `)
+        await db.run(`INSERT INTO jobs(name, daily_hours, total_hours, created_at) 
+                             VALUES("One Two Projects", 3, 47, 1617514376018);`)
 
         await db.close()
-
     }
 }
 
