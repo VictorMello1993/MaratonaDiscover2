@@ -21,7 +21,7 @@
 </p>
 
 <h2>:earth_americas: Visão geral</h2>
-<p>Apllicação construída com intuito de revisar os conceitos de back-end com Node.js abordados na Maratona Discover 2ª edição, promovida pela<a href="https://rocketseat.com.br/"> Rocketseat</a>. Trata-se de uma aplicação de gerenciamento de projetos freelancer, que calcula qual o valor que a pessoa irá ganhar proporcional ao número de horas estimadas do projeto e ao número de horas que a pessoa irá se dedicar diariamente num projeto.</p>
+<p>Aplicação construída com intuito de revisar os conceitos de back-end com Node.js abordados na Maratona Discover 2ª edição, promovida pela<a href="https://rocketseat.com.br/"> Rocketseat</a>. Trata-se de uma aplicação de gerenciamento de projetos freelancer, que calcula qual o valor que a pessoa irá ganhar proporcional ao número de horas estimadas do projeto e ao número de horas que a pessoa irá se dedicar diariamente num projeto.</p>
 
 ---
 
