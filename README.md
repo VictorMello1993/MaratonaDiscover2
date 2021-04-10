@@ -75,5 +75,8 @@ git clone https://github.com/VictorMello1993/MaratonaDiscover2.git
 
 ---
 
-
-
+## Melhorias
+- [ ] Incluir validações antes de salvar no banco de dados
+- [ ] Encontrar possíveis bugs e corrigí-los
+- [ ] Ajustar a responsividade da tela para o modo mobile
+- [ ] Incluir uma barra de notificação de sucesso (verde) e de erro (vermelho) após cadastrar, editar ou excluir job
