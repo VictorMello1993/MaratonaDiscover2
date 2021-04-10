@@ -83,5 +83,4 @@ git clone https://github.com/VictorMello1993/MaratonaDiscover2.git
 
 ---
 ## Versões do README
-
-
+<img src="./public/images/to_readme/eua.png" alt="Bandeira dos Estados Unidos" width="22px"/> | <img src="./public/images/to_readme/br.jpg" alt="Bandeira do Brasil" width="22px"/> <a href="/README.md">Português</a>
