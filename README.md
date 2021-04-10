@@ -20,6 +20,27 @@
   <a href="#melhorias-a-implementar">Melhorias a implementar</a> •  
 </p>
 
+---
+
+<h2>🎬 Demo</h2>
+
+## Criar um novo job
+![JobsCalcCreateJob](https://user-images.githubusercontent.com/35710766/114282945-6db15780-9a1d-11eb-8cdb-6b46b4ae12c3.gif)
+
+</br>
+
+## Editar e excluir job
+![JobsCalcJobEditJobDelete](https://user-images.githubusercontent.com/35710766/114283097-6fc7e600-9a1e-11eb-81cb-caf740ecde65.gif)
+
+</br>
+
+## Perfil
+![JobsCalcProfle](https://user-images.githubusercontent.com/35710766/114283112-7eae9880-9a1e-11eb-87dc-d701d029bd34.gif)
+
+</br>
+
+---
+
 <h2>:earth_americas: Visão geral</h2>
 <p>Aplicação construída com intuito de revisar os conceitos de back-end com Node.js abordados na Maratona Discover 2ª edição, promovida pela<a href="https://rocketseat.com.br/"> Rocketseat</a>. Trata-se de uma aplicação de gerenciamento de projetos freelancer, que calcula o valor que a pessoa irá ganhar proporcional ao número de horas estimadas do projeto e ao número de horas que a pessoa irá se dedicar diariamente no projeto.</p>
 
