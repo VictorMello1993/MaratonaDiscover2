@@ -17,8 +17,8 @@
   <a href="#clapper-demo">Demo</a> •
   <a href="#earth_americas-overview">Overview</a> •
   <a href="#wrench-features">Features</a> •
-  <a href="#triangular_flag_on_postcomeçando">Getting started</a> •
-  <a href="#improvements">Improvements</a> •    
+  <a href="#triangular_flag_on_postgetting-started">Getting started</a> •
+  <a href="#improvements">Improvements</a>    
 </p>
 
 ---
