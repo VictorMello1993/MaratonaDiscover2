@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="#triangular_flag_on_postcomeçando">Demo</a> •
+  <a href="#clapper-demo">Demo</a> •
   <a href="#earth_americas-visão-geral">Visão geral</a> •
   <a href="#wrench-recursos">Recursos</a> •
   <a href="#triangular_flag_on_postcomeçando">Começando</a> •
