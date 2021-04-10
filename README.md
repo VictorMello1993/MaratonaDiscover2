@@ -14,6 +14,7 @@
 </p>
 
 <p align="center">
+  <a href="#triangular_flag_on_postcomeçando">Demo</a> •
   <a href="#earth_americas-visão-geral">Visão geral</a> •
   <a href="#wrench-recursos">Recursos</a> •
   <a href="#triangular_flag_on_postcomeçando">Começando</a> •
@@ -22,7 +23,7 @@
 
 ---
 
-<h2>🎬 Demo</h2>
+<h2>:clapper: Demo</h2>
 
 ## Criar um novo job
 ![JobsCalcCreateJob](https://user-images.githubusercontent.com/35710766/114282945-6db15780-9a1d-11eb-8cdb-6b46b4ae12c3.gif)
