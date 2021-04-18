@@ -18,7 +18,7 @@
   <a href="#earth_americas-visão-geral">Visão geral</a> •
   <a href="#wrench-recursos">Recursos</a> •
   <a href="#triangular_flag_on_postcomeçando">Começando</a> •
-  <a href="#melhorias-a-implementar">Melhorias a implementar</a> •  
+  <a href="#melhorias">Melhorias</a>
 </p>
 
 ---
@@ -80,3 +80,7 @@ git clone https://github.com/VictorMello1993/MaratonaDiscover2.git
 - [ ] Encontrar possíveis bugs e corrigí-los
 - [ ] Ajustar a responsividade da tela para o modo mobile
 - [ ] Incluir uma barra de notificação de sucesso (verde) e de erro (vermelho) após cadastrar, editar ou excluir job
+
+---
+## Versões do README
+<img src="./public/images/to_readme/eua.png" alt="Bandeira dos Estados Unidos" width="22px"/> <a href="/README-ENUS.md">Inglês</a> | <img src="./public/images/to_readme/br.jpg" alt="Bandeira do Brasil" width="22px"/> <a href="/README.md">Português</a>
